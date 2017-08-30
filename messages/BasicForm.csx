@@ -17,6 +17,9 @@ public class BasicForm
     [Prompt("Please select your favorite {&} {||}")]
     public ColorOptions Color { get; set; }
 
+    [Prompt("Please say how many cars you have?")]
+    public int NumberOfCars { get; set; }
+
     public static IForm<BasicForm> BuildForm()
     {
         // Builds an IForm<T> based on BasicForm
