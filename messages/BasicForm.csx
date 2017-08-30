@@ -1,24 +1,21 @@
 using System;
 using Microsoft.Bot.Builder.FormFlow;
 
-public enum CarOptions { Convertible = 1, SUV, EV };
-public enum ColorOptions { Red = 1, White, Blue };
+public enum Numbers {  1, 2, 3,4,5,6,7,8,9 };
+public enum DoneWeighting { Done = 1, Weighting };
 
 // For more information about this template visit http://aka.ms/azurebots-csharp-form
 [Serializable]
 public class BasicForm
 {
-    [Prompt("Hi! What is your {&}?")]
-    public string Name { get; set; }
+    [Prompt("Hi! Choose a number from below list?")]
+    public Numbers Name { get; set; }
 
-    [Prompt("Please select your favorite car type {||}")]
-    public CarOptions Car { get; set; }
+    [Prompt("Question1?")]
+    public DoneWeighting Question1 { get; set; }
 
-    [Prompt("Please select your favorite {&} {||}")]
-    public ColorOptions Color { get; set; }
-
-    [Prompt("Please say how many cars you have?")]
-    public int NumberOfCars { get; set; }
+    [Prompt("Question2?")]
+    public DoneWeighting Question2 { get; set; }
 
     public static IForm<BasicForm> BuildForm()
     {
