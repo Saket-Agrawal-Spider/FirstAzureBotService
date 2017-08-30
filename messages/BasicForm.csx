@@ -2,7 +2,7 @@ using System;
 using Microsoft.Bot.Builder.FormFlow;
 
 public enum NumbersToChoose { One=1, Two, Three,Four,Five,Six,Seven,Eight,Nine };
-public enum DoneWeighting { Done = 1, Weighting };
+public enum DoneWaiting { Done = 1, Waiting };
 
 // For more information about this template visit http://aka.ms/azurebots-csharp-form
 [Serializable]
@@ -11,16 +11,28 @@ public class BasicForm
     [Prompt("Hi! Choose a number from below list {&}? {||}")]
     public NumbersToChoose Name { get; set; }
 
-    [Prompt("Question1?")]
-    public DoneWeighting Question1 { get; set; }
+    [Prompt("Multiply your number by 2.")]
+    public DoneWaiting Question1 { get; set; }
 
-    [Prompt("Question2?")]
-    public DoneWeighting Question2 { get; set; }
+    [Prompt("Add 5 to your result.")]
+    public DoneWaiting Question2 { get; set; }
+
+    [Prompt("Multiply the result by 50.")]
+    public DoneWaiting Question2 { get; set; }
+
+    [Prompt("If you've already had your birthday this year, Add 1767.If not, Add 1766.")]
+    public DoneWaiting Question2 { get; set; }
+
+    [Prompt("Got a four-figure number? Now, Subtract the year of your birth from the result.")]
+    public DoneWaiting Question2 { get; set; }
+
 
     public static IForm<BasicForm> BuildForm()
     {
         // Builds an IForm<T> based on BasicForm
-        return new FormBuilder<BasicForm>().Build();
+        return new FormBuilder<BasicForm>()
+ .Message("Can You Unmistakably guess your age? All you have to do is to answer the following six questions.GRAB A PEN or CALCULATOR to see how it works.")
+.Build();
     }
 
     public static IFormDialog<BasicForm> BuildFormDialog(FormOptions options = FormOptions.PromptInStart)
