@@ -30,7 +30,7 @@ public class BasicForm
     public static IForm<BasicForm> BuildForm()
     {
         // Builds an IForm<T> based on BasicForm
-        return new FormBuilder<BasicForm>().Confirm("You must have got 3 digit number, first digit is your choosen number and other two are your age.").Build();
+        return new FormBuilder<BasicForm>().AddRemainingFields().Confirm("You must have got 3 digit number, first digit is your choosen number and other two are your age.").Build();
     }
 
     public static IFormDialog<BasicForm> BuildFormDialog(FormOptions options = FormOptions.PromptInStart)
