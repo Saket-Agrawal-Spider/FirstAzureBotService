@@ -18,13 +18,13 @@ public class BasicForm
     public DoneWaiting Question2 { get; set; }
 
     [Prompt("Multiply the result by 50.")]
-    public DoneWaiting Question2 { get; set; }
+    public DoneWaiting Question3 { get; set; }
 
     [Prompt("If you've already had your birthday this year, Add 1767.If not, Add 1766.")]
-    public DoneWaiting Question2 { get; set; }
+    public DoneWaiting Question4 { get; set; }
 
     [Prompt("Got a four-figure number? Now, Subtract the year of your birth from the result.")]
-    public DoneWaiting Question2 { get; set; }
+    public DoneWaiting Question5 { get; set; }
 
 
     public static IForm<BasicForm> BuildForm()
