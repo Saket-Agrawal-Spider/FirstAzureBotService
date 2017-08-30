@@ -30,9 +30,7 @@ public class BasicForm
     public static IForm<BasicForm> BuildForm()
     {
         // Builds an IForm<T> based on BasicForm
-        return new FormBuilder<BasicForm>()
- .Message("Can You Unmistakably guess your age? All you have to do is to answer the following six questions.GRAB A PEN or CALCULATOR to see how it works.")
-.Build();
+        return new FormBuilder<BasicForm>().Confirm("You must have got 3 digit number, first digit is your choosen number and other two are your age.").Build();
     }
 
     public static IFormDialog<BasicForm> BuildFormDialog(FormOptions options = FormOptions.PromptInStart)

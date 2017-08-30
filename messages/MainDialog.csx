@@ -30,10 +30,11 @@ public class MainDialog : IDialog<BasicForm>
     {
         try
         {
+             
             var form = await result;
             if (form != null)
             {
-                await context.PostAsync("First digit is your choosen number and other two are your age.");
+                //await context.PostAsync("You must have got 3 digit number, first digit is your choosen number and other two are your age.");
             }
             else
             {
