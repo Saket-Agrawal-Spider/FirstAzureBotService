@@ -8,7 +8,7 @@ public enum DoneWeighting { Done = 1, Weighting };
 [Serializable]
 public class BasicForm
 {
-    [Prompt("Hi! Choose a number from below list?")]
+    [Prompt("Hi! Choose a number from below list {&}? {||}")]
     public NumbersToChoose Name { get; set; }
 
     [Prompt("Question1?")]
