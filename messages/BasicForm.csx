@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Bot.Builder.FormFlow;
 
-public enum Numbers {  1, 2, 3,4,5,6,7,8,9 };
+public enum NumbersToChoose { 1, 2, 3,4,5,6,7,8,9 };
 public enum DoneWeighting { Done = 1, Weighting };
 
 // For more information about this template visit http://aka.ms/azurebots-csharp-form
@@ -9,7 +9,7 @@ public enum DoneWeighting { Done = 1, Weighting };
 public class BasicForm
 {
     [Prompt("Hi! Choose a number from below list?")]
-    public Numbers Name { get; set; }
+    public NumbersToChoose Name { get; set; }
 
     [Prompt("Question1?")]
     public DoneWeighting Question1 { get; set; }
